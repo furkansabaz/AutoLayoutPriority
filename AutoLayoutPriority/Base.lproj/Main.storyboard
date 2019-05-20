@@ -1,20 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayoutPriority" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kfq-g7-YO9"/>
+                        <viewControllerLayoutGuide type="bottom" id="n2Q-OG-eig"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raU-0h-sD6">
+                                <rect key="frame" x="21" y="832" width="120.5" height="30"/>
+                                <color key="backgroundColor" red="0.14925738120000001" green="0.63821671489999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Beğen">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H84-Ck-0F5">
+                                <rect key="frame" x="149.5" y="832" width="121" height="30"/>
+                                <color key="backgroundColor" red="0.14925738120000001" green="0.63821671489999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Yorum Yap">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z4V-aG-A0z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azc-gi-Ot2">
+                                <rect key="frame" x="278.5" y="832" width="120.5" height="30"/>
+                                <color key="backgroundColor" red="0.14925738120000001" green="0.63821671489999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Takip Et">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnTiklandi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ugy-AI-G05"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NZW-Te-lSH">
+                                <rect key="frame" x="353" y="52" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUTO LAYOUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWM-WA-Azr">
+                                <rect key="frame" x="149.5" y="56.5" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="azc-gi-Ot2" firstAttribute="width" secondItem="raU-0h-sD6" secondAttribute="width" id="2to-aR-aJe"/>
+                            <constraint firstItem="azc-gi-Ot2" firstAttribute="firstBaseline" secondItem="raU-0h-sD6" secondAttribute="firstBaseline" id="8v4-GH-ylJ"/>
+                            <constraint firstItem="NZW-Te-lSH" firstAttribute="top" secondItem="Kfq-g7-YO9" secondAttribute="bottom" constant="8" id="By5-mT-idn"/>
+                            <constraint firstAttribute="trailing" secondItem="azc-gi-Ot2" secondAttribute="trailing" constant="15" id="CKc-zT-SCr"/>
+                            <constraint firstAttribute="trailing" secondItem="H84-Ck-0F5" secondAttribute="trailing" priority="999" id="O85-Kd-nay"/>
+                            <constraint firstItem="H84-Ck-0F5" firstAttribute="leading" secondItem="raU-0h-sD6" secondAttribute="trailing" constant="8" symbolic="YES" id="YS4-7S-5ay"/>
+                            <constraint firstAttribute="trailing" secondItem="NZW-Te-lSH" secondAttribute="trailing" constant="15" id="ahu-Ez-Bj7"/>
+                            <constraint firstItem="H84-Ck-0F5" firstAttribute="width" secondItem="raU-0h-sD6" secondAttribute="width" id="fCv-9E-Qzg"/>
+                            <constraint firstItem="azc-gi-Ot2" firstAttribute="leading" secondItem="raU-0h-sD6" secondAttribute="trailing" priority="999" constant="8" symbolic="YES" id="kXj-aJ-vZ2"/>
+                            <constraint firstItem="raU-0h-sD6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="21" id="lVc-vC-9vD"/>
+                            <constraint firstItem="NZW-Te-lSH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eWM-WA-Azr" secondAttribute="trailing" constant="8" id="lhZ-W5-fXZ"/>
+                            <constraint firstItem="azc-gi-Ot2" firstAttribute="leading" secondItem="H84-Ck-0F5" secondAttribute="trailing" constant="8" symbolic="YES" id="mCA-tc-0Hp"/>
+                            <constraint firstAttribute="trailing" secondItem="raU-0h-sD6" secondAttribute="trailing" priority="998" id="nLv-ew-HlM"/>
+                            <constraint firstItem="eWM-WA-Azr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" priority="250" id="phb-US-P77"/>
+                            <constraint firstItem="H84-Ck-0F5" firstAttribute="firstBaseline" secondItem="raU-0h-sD6" secondAttribute="firstBaseline" id="rrP-zC-GNh"/>
+                            <constraint firstItem="n2Q-OG-eig" firstAttribute="top" secondItem="raU-0h-sD6" secondAttribute="bottom" id="wdV-md-UFy"/>
+                            <constraint firstItem="NZW-Te-lSH" firstAttribute="firstBaseline" secondItem="eWM-WA-Azr" secondAttribute="firstBaseline" id="xUW-ZR-upe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
